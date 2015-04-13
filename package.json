@@ -1,11 +1,13 @@
 {
 
-  "name": "htmlcov-example",
+  "name": "node-codacy-coverage-example",
   "version": "0.0.1",
 
   "devDependencies": {
     "mocha": "~ 1.4.2",
-    "should": "~ 1.1.0"
+    "should": "~ 1.1.0",
+    "istanbul": "~ 0.3.13",
+    "codacy-coverage": "~ 1.0.3"
   },
 
   "scripts": {

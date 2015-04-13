@@ -2,8 +2,8 @@ test:
 	npm test
 
 coverage:
-	jscoverage --no-highlight lib lib-cov
-	EXAMPLE_COV=1 mocha -r should -R html-cov > coverage.html
-	rm -rf lib-cov
+	./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -r should -R spec
+	cat ./coverage/lcov.info | ./node_modules/codacy-coverage/bin/codacy-coverage.js
+	rm -rf ./coverage
 
 .PHONY: test
